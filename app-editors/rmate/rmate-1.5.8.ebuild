@@ -11,5 +11,5 @@ DESCRIPTION="Remote TextMate - Edit files from anywhere in TextMate 2 on your lo
 HOMEPAGE="https://github.com/textmate/rmate"
 
 SLOT="0"
-KEYWORDS="amd64 x86"
+KEYWORDS="amd64 amd64-fbsd arm x86"
 
