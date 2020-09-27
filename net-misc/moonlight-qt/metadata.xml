@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "http://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <!-- maintainer-needed -->
+  <longdescription>
+    Moonlight PC is an open source implementation of NVIDIA's GameStream,
+    as used by the NVIDIA Shield, but built to run on Linux. This client
+    is the successor to Moonlight Chrome for streaming on PC.
+  </longdescription>
+</pkgmetadata>
