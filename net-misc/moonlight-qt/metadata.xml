@@ -7,4 +7,7 @@
     as used by the NVIDIA Shield, but built to run on Linux. This client
     is the successor to Moonlight Chrome for streaming on PC.
   </longdescription>
+  <use>
+    <flag name="haptic">Enable the haptic (force feedback) subsystem</flag>
+  </use>
 </pkgmetadata>
