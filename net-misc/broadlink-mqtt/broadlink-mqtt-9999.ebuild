@@ -1,29 +1,23 @@
-# Copyright 1999-2017 Gentoo Foundation
+# Copyright 1999-2022 Gentoo Foundation
 # Distributed under the terms of the GNU General Public License v2
 
-EAPI=6
-PYTHON_COMPAT=( python2_7 )
+EAPI=7
+PYTHON_COMPAT=( python3_{9..10} )
 
-inherit user python-single-r1 git-r3
+inherit user git-r3
 
 EGIT_REPO_URI="https://github.com/eschava/${PN}.git"
 
 DESCRIPTION="MQTT client to control BroadLink devices"
 HOMEPAGE="https://github.com/eschava/broadlink-mqtt"
 
+KEYWORDS="amd64 x86"
 LICENSE="MIT"
 SLOT="0"
-REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
-DEPEND="${PYTHON_DEPS}"
-RDEPEND="dev-python/paho-mqtt[${PYTHON_USEDEP}]
-		 dev-python/broadlink-python[${PYTHON_USEDEP}]
-		 ${DEPEND}"
-
-PATCHES=(
-	"${FILESDIR}"/remove-test-device.patch
-	"${FILESDIR}"/fix-config-path.patch
-)
+RDEPEND="
+	dev-python/paho-mqtt
+	dev-python/python-broadlink"
 
 pkg_setup() {
 	enewgroup broadlink-mqtt
