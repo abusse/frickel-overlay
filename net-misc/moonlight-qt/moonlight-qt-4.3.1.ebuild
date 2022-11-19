@@ -1,4 +1,4 @@
-# Copyright 1999-2020 Gentoo Authors
+# Copyright 1999-2022 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=7
@@ -23,7 +23,7 @@ RDEPEND="
 	dev-qt/qtnetwork:5
 	dev-qt/qtquickcontrols2
 	dev-qt/qtsvg
-	media-libs/libsdl2[haptic?]
+	media-libs/libsdl2[haptic?,kms]
 	media-libs/opus
 	media-libs/sdl2-ttf
 "
