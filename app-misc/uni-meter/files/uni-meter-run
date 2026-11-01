@@ -1,0 +1,13 @@
+#!/bin/sh
+set -eu
+
+: "${UNI_METER_APPDIR:=/opt/uni-meter}"
+: "${UNI_METER_CONF:=/etc/uni-meter.conf}"
+: "${UNI_METER_LOG_CONFIG:=/etc/uni-meter/logback.xml}"
+: "${JAVA_OPTS:=}"
+
+cd "${UNI_METER_APPDIR}"
+
+export JAVA_OPTS="${JAVA_OPTS} -Dconfig.file=${UNI_METER_CONF} -Dlogback.configurationFile=${UNI_METER_LOG_CONFIG}"
+
+exec "${UNI_METER_APPDIR}/bin/uni-meter.sh"

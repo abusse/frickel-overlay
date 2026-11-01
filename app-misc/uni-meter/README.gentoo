@@ -1,0 +1,23 @@
+uni-meter Gentoo overlay notes
+==============================
+
+Installed paths:
+- application: /opt/uni-meter
+- main config: /etc/uni-meter.conf
+- logback config: /etc/uni-meter/logback.xml
+- service wrapper: /usr/libexec/uni-meter-run
+
+Basic install:
+  ebuild /var/db/repos/<overlay>/acct-group/uni-meter/uni-meter-0.ebuild manifest
+  ebuild /var/db/repos/<overlay>/acct-user/uni-meter/uni-meter-0.ebuild manifest
+  ebuild /var/db/repos/<overlay>/app-misc/uni-meter/uni-meter-1.4.1.ebuild manifest
+  emerge -av acct-group/uni-meter acct-user/uni-meter app-misc/uni-meter
+
+Enable services:
+  rc-update add avahi-daemon default
+  rc-update add uni-meter default
+
+Notes:
+- The example config uses Home Assistant as input and Shelly Pro 3EM as output.
+- Adjust the Home Assistant URL, token, IPs, and MAC before starting.
+- The example uses port 8080 for the Shelly Pro 3EM emulation and 8081 for uni-meter's own HTTP server.

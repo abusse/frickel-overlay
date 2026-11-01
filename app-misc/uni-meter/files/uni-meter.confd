@@ -1,0 +1,8 @@
+UNI_METER_USER="uni-meter"
+UNI_METER_GROUP="uni-meter"
+
+UNI_METER_HOME="/var/lib/uni-meter"
+UNI_METER_CONF="/etc/uni-meter.conf"
+UNI_METER_LOG_CONFIG="/etc/uni-meter/logback.xml"
+
+JAVA_OPTS=""

@@ -1,0 +1,28 @@
+#!/sbin/openrc-run
+
+name="uni-meter"
+description="uni-meter service"
+
+command="/usr/libexec/uni-meter-run"
+command_user="${UNI_METER_USER}:${UNI_METER_GROUP}"
+command_background="yes"
+pidfile="/run/${RC_SVCNAME}.pid"
+
+depend() {
+	use net avahi-daemon
+}
+
+start_pre() {
+	checkpath --directory --owner "${UNI_METER_USER}:${UNI_METER_GROUP}" --mode 0755 /run
+	checkpath --directory --owner "${UNI_METER_USER}:${UNI_METER_GROUP}" --mode 0750 /var/log/uni-meter
+	checkpath --directory --owner "${UNI_METER_USER}:${UNI_METER_GROUP}" --mode 0750 /var/lib/uni-meter
+}
+
+stop_post() {
+	# OpenRC's pidfile tracks the launcher wrapper (uni-meter-run / uni-meter.sh),
+	# not the JVM it spawns. A plain stop therefore leaves the old java process
+	# running, and the next start fails to bind its ports (or an upgrade keeps
+	# running the old jar). Make sure the JVM is really gone.
+	pkill -u "${UNI_METER_USER}" -x java 2>/dev/null
+	return 0
+}
