@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <upstream>
+    <remote-id type="pypi">simple-dwd-weatherforecast</remote-id>
+    <remote-id type="github">FL550/simple_dwd_weatherforecast</remote-id>
+  </upstream>
+</pkgmetadata>
