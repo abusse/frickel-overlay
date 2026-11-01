@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <upstream>
+    <remote-id type="pypi">titlecase</remote-id>
+    <remote-id type="github">ppannuto/python-titlecase</remote-id>
+    <maintainer status="unknown">
+      <email>pat.pannuto+titlecase@gmail.com</email>
+      <name>Pat Pannuto</name>
+    </maintainer>
+  </upstream>
+</pkgmetadata>
