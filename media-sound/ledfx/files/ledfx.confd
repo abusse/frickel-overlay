@@ -1,0 +1,12 @@
+# Configuration for the ledfx service
+
+# Directory holding LedFx configuration (owned by the ledfx user)
+LEDFX_CONFIG_DIR="/var/lib/ledfx"
+
+# Address and port for the LedFx web interface
+LEDFX_HOST="0.0.0.0"
+LEDFX_PORT="8888"
+
+# Extra command line options passed to ledfx
+# (e.g. "--offline" to disable the crash logger and update checks)
+LEDFX_OPTS="--offline"

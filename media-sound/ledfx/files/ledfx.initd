@@ -1,0 +1,26 @@
+#!/sbin/openrc-run
+
+name="LedFx"
+description="LedFx network based light effect controller"
+
+: "${LEDFX_CONFIG_DIR:=/var/lib/ledfx}"
+: "${LEDFX_HOST:=0.0.0.0}"
+: "${LEDFX_PORT:=8888}"
+
+command="/usr/bin/ledfx"
+command_args="-c ${LEDFX_CONFIG_DIR} --host ${LEDFX_HOST} -p ${LEDFX_PORT} --no-tray ${LEDFX_OPTS}"
+command_user="ledfx:ledfx"
+command_background="yes"
+pidfile="/run/${RC_SVCNAME}.pid"
+output_log="/var/log/ledfx/ledfx.log"
+error_log="/var/log/ledfx/ledfx.log"
+
+depend() {
+	need net
+	use avahi-daemon
+}
+
+start_pre() {
+	checkpath --directory --owner ledfx:ledfx --mode 0750 "${LEDFX_CONFIG_DIR}"
+	checkpath --directory --owner ledfx:ledfx --mode 0750 /var/log/ledfx
+}
