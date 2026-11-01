@@ -1,0 +1,13 @@
+#!/sbin/openrc-run
+
+description="Govee2MQTT MQTT bridge"
+command=/usr/bin/govee
+command_args="-c /etc/govee2mqtt/config.yaml"
+pidfile=/run/govee2mqtt.pid
+name="govee2mqtt"
+
+depend() {
+    use net
+    after mosquitto
+}
+
