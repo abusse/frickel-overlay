@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<maintainer type="person">
+		<email>anselm.busse@outlook.com</email>
+		<name>Anselm Busse</name>
+	</maintainer>
+	<use>
+		<flag name="deinit-on-launch">Release renderer, window and audio while an emulator runs (needed on KMS/DRM without a display server)</flag>
+		<flag name="gles">Build the OpenGL ES 3.0 renderer instead of desktop OpenGL</flag>
+		<flag name="video-hw-decoding">Enable experimental FFmpeg hardware video decoding for theme videos</flag>
+	</use>
+	<upstream>
+		<remote-id type="gitlab">es-de/emulationstation-de</remote-id>
+	</upstream>
+</pkgmetadata>
