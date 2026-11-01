@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <maintainer type="person">
+    <email>root@virt.local-aw</email>
+    <name>Local overlay</name>
+  </maintainer>
+  <longdescription>
+    ledmon and ledctl are utilities for monitoring storage subsystem status
+    LEDs in RAID arrays. Supports SAS/SATA/NVMe enclosures via SES-2,
+    Intel(R) VMD, and AHCI SGPIO Enclosure Management on supported chipsets.
+  </longdescription>
+  <upstream>
+    <remote-id type="github">md-raid-utilities/ledmon</remote-id>
+  </upstream>
+</pkgmetadata>
