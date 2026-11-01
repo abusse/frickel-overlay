@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+  <use>
+    <flag name="dvbcsa">
+      Enable dvbapi protocol support
+    </flag>
+  </use>
+  <upstream>
+    <changelog>https://github.com/catalinii/minisatip/releases</changelog>
+    <doc>https://github.com/catalinii/minisatip/wiki</doc>
+  </upstream>
+  <longdescription lang="en">
+    Minisatip is a multi-threaded satip server version 1.2 that runs
+    under Linux and it was tested with DVB-S, DVB-S2, DVB-T, DVB-T2,
+    DVB-C, DVB-C2, ATSC and ISDB-T cards.
+  </longdescription>
+</pkgmetadata>
